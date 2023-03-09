@@ -1,0 +1,93 @@
+[
+    {
+        "id": 28,
+        "addon_name": "Header",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 1,
+        "addon_page_id": 1,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"28\",\"addon_name\":\"Header\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xNZWRpY29tXEhlYWRlclxIZWFkZXI=\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"1\",\"addon_page_id\":\"1\",\"addon_page_type\":\"dynamic_page\",\"header_repeater\":{\"title_\":[\"Medical {h}Equipment{\\\/h} Store\",\"Medical {h}Equipment{\\\/h} Store\"],\"subtitle_\":[\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat pulvinar enim hendrerit pellentesque Pharetra consectetur quam.\",\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat pulvinar enim hendrerit pellentesque Pharetra consectetur quam.\"],\"shop_button_text_\":[\"Shop Now\",\"Shop Now\"],\"shop_button_url_\":[\"#\",\"#\"],\"figure_image_\":[\"456\",\"456\"]},\"padding_top\":\"0\",\"padding_bottom\":\"51\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Medicom\\Header\\Header",
+        "created_at": "2023-02-25T12:38:11.000000Z",
+        "updated_at": "2023-03-05T11:51:35.000000Z"
+    },
+    {
+        "id": 29,
+        "addon_name": "Services",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 2,
+        "addon_page_id": 1,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"29\",\"addon_name\":\"Services\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xNZWRpY29tXENvbW1vblxTZXJ2aWNlcw==\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"2\",\"addon_page_id\":\"1\",\"addon_page_type\":\"dynamic_page\",\"services_repeater\":{\"repeater_title_\":[\"Free Shipping\",\"Delivery On time\",\"Secure Payment\"],\"repeater_subtitle_\":[\"For all order over $120\",\"For all order over $120\",\"100% Secure Payment\"]},\"padding_top\":\"40\",\"padding_bottom\":\"38\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Medicom\\Common\\Services",
+        "created_at": "2023-02-26T05:39:26.000000Z",
+        "updated_at": "2023-03-05T11:49:32.000000Z"
+    },
+    {
+        "id": 30,
+        "addon_name": "FeaturedProductSlider",
+        "addon_type": "new",
+        "addon_location": "dynamic_page",
+        "addon_order": 3,
+        "addon_page_id": 1,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"addon_name\":\"FeaturedProductSlider\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xNZWRpY29tXFByb2R1Y3RcRmVhdHVyZWRQcm9kdWN0U2xpZGVy\",\"addon_type\":\"new\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"3\",\"addon_page_id\":\"1\",\"addon_page_type\":\"dynamic_page\",\"title\":\"Featured Product\",\"item_show\":\"8\",\"padding_top\":\"110\",\"padding_bottom\":\"110\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Medicom\\Product\\FeaturedProductSlider",
+        "created_at": "2023-02-26T10:50:23.000000Z",
+        "updated_at": "2023-02-26T10:50:23.000000Z"
+    },
+    {
+        "id": 31,
+        "addon_name": "CategoriesSlider",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 4,
+        "addon_page_id": 1,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"31\",\"addon_name\":\"CategoriesSlider\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xNZWRpY29tXFByb2R1Y3RcQ2F0ZWdvcmllc1NsaWRlcg==\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"4\",\"addon_page_id\":\"1\",\"addon_page_type\":\"dynamic_page\",\"section_title\":\"Search By Category\",\"product_count\":\"on\",\"category_limit\":null,\"padding_top\":\"110\",\"padding_bottom\":\"110\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Medicom\\Product\\CategoriesSlider",
+        "created_at": "2023-02-26T13:15:02.000000Z",
+        "updated_at": "2023-02-26T13:47:03.000000Z"
+    },
+    {
+        "id": 32,
+        "addon_name": "CollectionCard",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 5,
+        "addon_page_id": 1,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"32\",\"addon_name\":\"CollectionCard\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xNZWRpY29tXENvbW1vblxDb2xsZWN0aW9uQ2FyZA==\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"5\",\"addon_page_id\":\"1\",\"addon_page_type\":\"dynamic_page\",\"repeater_data\":{\"repeater_title_\":[\"Infrared Thermometer\",\"Plant Collection\"],\"repeater_break_text_\":[\"on\",\"on\"],\"repeater_button_text_\":[\"Shop Now\",\"Shop Now\"],\"repeater_button_url_\":[\"#\",\"#\"],\"repeater_image_\":[\"457\",\"462\"],\"repeater_background_color_\":[\"rgb(240, 241, 250)\",\"rgb(229, 239, 248)\"]},\"padding_top\":\"110\",\"padding_bottom\":\"110\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Medicom\\Common\\CollectionCard",
+        "created_at": "2023-02-27T07:39:42.000000Z",
+        "updated_at": "2023-02-27T08:50:05.000000Z"
+    },
+    {
+        "id": 33,
+        "addon_name": "ProductTypeList",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 6,
+        "addon_page_id": 1,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"33\",\"addon_name\":\"ProductTypeList\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xNZWRpY29tXFByb2R1Y3RcUHJvZHVjdFR5cGVMaXN0\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"6\",\"addon_page_id\":\"1\",\"addon_page_type\":\"dynamic_page\",\"title\":\"Our Store\",\"categories\":[\"6\",\"7\",\"9\",\"10\",\"11\"],\"item_show\":\"8\",\"view_all_url\":\"#\",\"padding_top\":\"110\",\"padding_bottom\":\"110\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Medicom\\Product\\ProductTypeList",
+        "created_at": "2023-02-27T10:57:46.000000Z",
+        "updated_at": "2023-02-27T11:19:53.000000Z"
+    },
+    {
+        "id": 34,
+        "addon_name": "Brand",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 7,
+        "addon_page_id": 1,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"34\",\"addon_name\":\"Brand\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xIZXhmYXNoaW9uXENvbW1vblxCcmFuZA==\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"7\",\"addon_page_id\":\"1\",\"addon_page_type\":\"dynamic_page\",\"brand\":[\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\"],\"item_show\":\"10\",\"item_pagination\":\"6\",\"padding_top\":\"110\",\"padding_bottom\":\"110\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\Common\\Brand",
+        "created_at": "2023-02-27T11:56:04.000000Z",
+        "updated_at": "2023-02-27T11:56:28.000000Z"
+    }
+]

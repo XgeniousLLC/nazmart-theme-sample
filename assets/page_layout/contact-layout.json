@@ -1,0 +1,41 @@
+[
+    {
+        "id": 196,
+        "addon_name": "ContactAreaOne",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 1,
+        "addon_page_id": 7,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"196\",\"addon_name\":\"ContactAreaOne\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxDb250YWN0XENvbnRhY3RBcmVhT25l\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"1\",\"addon_page_id\":\"7\",\"addon_page_type\":\"dynamic_page\",\"title\":\"Contact with us\",\"description\":\"Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore.\",\"contact_tenant_repeater\":{\"repeater_info_\":[\"Phone\",\"Email\",\"Address\"],\"repeater_sub_info_\":[\"(208) 555-0112\",\"nextcom@example.com\",\"2715 Ash Dr. San Jose, South Dakota 83475\"],\"repeater_icon_\":[\"las la-phone\",\"las la-envelope\",\"las la-map-pin\"]},\"custom_form_id\":\"1\",\"padding_top\":\"54\",\"padding_bottom\":\"110\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\Contact\\ContactAreaOne",
+        "created_at": "2022-11-15T12:07:12.000000Z",
+        "updated_at": "2022-11-15T12:46:32.000000Z"
+    },
+    {
+        "id": 197,
+        "addon_name": "GoogleMap",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 2,
+        "addon_page_id": 7,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"197\",\"addon_name\":\"GoogleMap\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxDb250YWN0XEdvb2dsZU1hcA==\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"2\",\"addon_page_id\":\"7\",\"addon_page_type\":\"dynamic_page\",\"location\":\"south dakota\",\"map_height\":\"300\",\"padding_top\":\"0\",\"padding_bottom\":\"110\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\Contact\\GoogleMap",
+        "created_at": "2022-11-15T12:46:59.000000Z",
+        "updated_at": "2022-11-15T12:50:41.000000Z"
+    },
+    {
+        "id": 199,
+        "addon_name": "Brand",
+        "addon_type": "update",
+        "addon_location": "dynamic_page",
+        "addon_order": 3,
+        "addon_page_id": 7,
+        "addon_page_type": "dynamic_page",
+        "addon_settings": "{\"id\":\"199\",\"addon_name\":\"Brand\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxDb21tb25cQnJhbmQ=\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"3\",\"addon_page_id\":\"7\",\"addon_page_type\":\"dynamic_page\",\"brand\":[\"2\",\"3\",\"4\",\"5\",\"6\",\"8\"],\"item_show\":\"6\",\"item_pagination\":\"2\",\"padding_top\":\"63\",\"padding_bottom\":\"66\"}",
+        "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\Common\\Brand",
+        "created_at": "2022-11-15T12:59:25.000000Z",
+        "updated_at": "2022-11-15T13:00:32.000000Z"
+    }
+]

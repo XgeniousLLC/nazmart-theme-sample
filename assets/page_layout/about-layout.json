@@ -1,0 +1,67 @@
+[
+  {
+    "id": 200,
+    "addon_name": "AboutStory",
+    "addon_type": "update",
+    "addon_location": "dynamic_page",
+    "addon_order": 1,
+    "addon_page_id": 2,
+    "addon_page_type": "dynamic_page",
+    "addon_settings": "{\"id\":\"200\",\"addon_name\":\"AboutStory\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxBYm91dFxBYm91dFN0b3J5\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"1\",\"addon_page_id\":\"2\",\"addon_page_type\":\"dynamic_page\",\"primary_title\":\"Our Story\",\"primary_description\":\"Mutley, you snickering, floppy eared hound. When courage is needed, you\\u2019re never around. Those medals you wear on your moth-eaten chest should be there for bungling at which you are best. So, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon. Howwww! Nab him, jab him, tab him, grab him, stop that pigeon now.\\r\\n\\r\\nMutley, you snickering, floppy eared hound. When courage is needed, you\\u2019re never around. Those medals you wear on your moth-eaten chest should be there for bungling at which you are best. So, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon, stop that pigeon. Howwww! Nab him, jab him, tab him, grab him, stop that pigeon now.\",\"primary_image\":\"348\",\"secondary_title_one\":null,\"secondary_description_one\":null,\"secondary_title_two\":null,\"secondary_description_two\":null,\"padding_top\":\"59\",\"padding_bottom\":\"110\"}",
+    "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\About\\AboutStory",
+    "created_at": "2022-11-15T17:30:41.000000Z",
+    "updated_at": "2022-11-15T17:45:19.000000Z"
+  },
+  {
+    "id": 201,
+    "addon_name": "AboutCounter",
+    "addon_type": "update",
+    "addon_location": "dynamic_page",
+    "addon_order": 2,
+    "addon_page_id": 2,
+    "addon_page_type": "dynamic_page",
+    "addon_settings": "{\"id\":\"201\",\"addon_name\":\"AboutCounter\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxBYm91dFxBYm91dENvdW50ZXI=\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"2\",\"addon_page_id\":\"2\",\"addon_page_type\":\"dynamic_page\",\"counter_repeater\":{\"repeater_title_\":[\"Total Products\",\"Total Variant\",\"Total User\",\"Total Sell\"],\"repeater_number_\":[\"1000\",\"1500\",\"500\",\"1200\"]},\"section_id\":null,\"section_class\":null,\"padding_top\":\"46\",\"padding_bottom\":\"110\"}",
+    "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\About\\AboutCounter",
+    "created_at": "2022-11-15T18:09:31.000000Z",
+    "updated_at": "2022-11-15T18:09:34.000000Z"
+  },
+  {
+    "id": 204,
+    "addon_name": "TestimonialTwo",
+    "addon_type": "update",
+    "addon_location": "dynamic_page",
+    "addon_order": 3,
+    "addon_page_id": 2,
+    "addon_page_type": "dynamic_page",
+    "addon_settings": "{\"id\":\"204\",\"addon_name\":\"TestimonialTwo\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxDb21tb25cVGVzdGltb25pYWxUd28=\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"4\",\"addon_page_id\":\"2\",\"addon_page_type\":\"dynamic_page\",\"title\":\"Clients Feedback\",\"item\":\"6\",\"order_by\":\"id\",\"order\":\"asc\",\"padding_top\":\"0\",\"padding_bottom\":\"110\"}",
+    "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\Common\\TestimonialTwo",
+    "created_at": "2022-11-15T18:21:53.000000Z",
+    "updated_at": "2022-11-15T18:53:16.000000Z"
+  },
+  {
+    "id": 205,
+    "addon_name": "Team",
+    "addon_type": "update",
+    "addon_location": "dynamic_page",
+    "addon_order": 4,
+    "addon_page_id": 2,
+    "addon_page_type": "dynamic_page",
+    "addon_settings": "{\"id\":\"205\",\"addon_name\":\"Team\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxDb21tb25cVGVhbQ==\",\"addon_type\":\"update\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"4\",\"addon_page_id\":\"2\",\"addon_page_type\":\"dynamic_page\",\"title\":\"Our Team\",\"repeater_data\":{\"repeater_name_\":[\"Brook Listner\",\"Jhon Cena\",\"Abraham Lincon\",\"Winston Doyle\"],\"repeater_designation_\":[\"Manager\",\"CEO\",\"Chairman\",\"Sales Manager\"],\"repeater_image_\":[\"349\",\"349\",\"349\",\"349\"]},\"padding_top\":\"36\",\"padding_bottom\":\"110\"}",
+    "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\Common\\Team",
+    "created_at": "2022-11-15T19:05:01.000000Z",
+    "updated_at": "2022-11-15T19:10:58.000000Z"
+  },
+  {
+    "id": 206,
+    "addon_name": "Services",
+    "addon_type": "new",
+    "addon_location": "dynamic_page",
+    "addon_order": 5,
+    "addon_page_id": 2,
+    "addon_page_type": "dynamic_page",
+    "addon_settings": "{\"addon_name\":\"Services\",\"addon_namespace\":\"UGx1Z2luc1xQYWdlQnVpbGRlclxBZGRvbnNcVGVuYW50c1xUaGVtZU9uZVxDb21tb25cU2VydmljZXM=\",\"addon_type\":\"new\",\"addon_location\":\"dynamic_page\",\"addon_order\":\"5\",\"addon_page_id\":\"2\",\"addon_page_type\":\"dynamic_page\",\"services_repeater\":{\"repeater_icon_\":[\"las la-truck\",\"las la-redo-alt\",\"las la-lock\",\"las la-gift\"],\"repeater_title_\":[\"Free Shipping\",\"Easy Return\",\"Secure Payment\",\"Best Offer\"],\"repeater_subtitle_\":[\"Order Over $90\",\"Within 15 Days\",\"Online Shopping\",\"Gauranteed\"]},\"padding_top\":\"26\",\"padding_bottom\":\"110\"}",
+    "addon_namespace": "Plugins\\PageBuilder\\Addons\\Tenants\\Hexfashion\\Common\\Services",
+    "created_at": "2022-11-15T19:13:42.000000Z",
+    "updated_at": "2022-11-15T19:13:42.000000Z"
+  }
+]
