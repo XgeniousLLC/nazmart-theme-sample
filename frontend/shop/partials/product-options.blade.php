@@ -1,40 +1,39 @@
-<ul class="global-card-thumb-icons">
+<ul class="collection-icon-list color-three">
     @if($product->inventory_detail_count < 1)
-        <li class="icon-list" title="{{__('Add to Cart')}}">
-            <a class="icon add-to-cart-btn" data-product_id="{{ $product->id }}" href="javascript:void(0)">
-                <i class="las la-shopping-cart"></i>
-            </a>
-        </li>
-
-        <li class="icon-list add-to-wishlist-btn" title="{{__('Add to Wishlist')}}">
-            <a class="icon add-to-wishlist-btn" data-product_id="{{ $product->id }}" href="javascript:void(0)">
+        <li class="lists add-to-wishlist-btn" title="{{__('View')}}">
+            <a class="icon cart-loading add-to-wishlist-btn" href="javascript:void(0)"
+               data-product_id="{{ $product->id }}">
                 <i class="lar la-heart"></i>
             </a>
         </li>
-
-        <li class="icon-list" title="{{__('Add to Compare')}}">
-            <a class="icon cart-loading compare-btn" data-product_id="{{ $product->id }}" href="javascript:void(0)">
-                <i class="las la-retweet"></i>
+        <li class="lists">
+            <a class="icon popup-modal cart-loading product-quick-view-ajax" href="javascript:void(0)"
+               data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
+                <i class="lar la-eye"></i>
             </a>
         </li>
-
+        <li class="lists" title="{{__('Add to Cart')}}">
+            <a class="icon cart-loading add-to-cart-btn" data-product_id="{{ $product->id }}" href="javascript:void(0)">
+                <i class="las la-shopping-bag"></i>
+            </a>
+        </li>
     @else
-        <li class="icon-list" title="{{__('Add to Cart')}}">
-            <a class="icon cart-loading product-quick-view-ajax" href="javascript:void(0)" data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
-                <i class="las la-shopping-cart"></i>
-            </a>
-        </li>
-
-        <li class="icon-list wishlist-btn" title="{{__('Add to Wishlist')}}">
-            <a class="icon cart-loading product-quick-view-ajax" href="javascript:void(0)" data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
+        <li class="lists">
+            <a class="icon cart-loading product-quick-view-ajax" href="javascript:void(0)"
+               data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
                 <i class="lar la-heart"></i>
             </a>
         </li>
-
-        <li class="icon-list" data-bs-toggle="tooltip" data-bs-placement="top"
-            title="{{__('Add to Compare')}}">
-            <a class="icon cart-loading product-quick-view-ajax" href="javascript:void(0)" data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
-                <i class="las la-retweet"></i>
+        <li class="lists">
+            <a class="icon popup-modal cart-loading product-quick-view-ajax" href="javascript:void(0)"
+               data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
+                <i class="lar la-eye"></i>
+            </a>
+        </li>
+        <li class="lists">
+            <a class="icon cart-loading product-quick-view-ajax" href="javascript:void(0)"
+               data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
+                <i class="las la-shopping-bag"></i>
             </a>
         </li>
     @endif
@@ -51,8 +50,4 @@
                 }
         }
     @endphp
-    <li class="icon-list">
-        <a class="icon cart-loading product-quick-view-ajax" href="javascript:void(0)" data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
-            <i class="lar la-eye"></i></a>
-    </li>
 </ul>

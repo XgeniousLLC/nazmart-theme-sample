@@ -14,7 +14,12 @@
                 <tbody id="cart_tbody">
                 @foreach($cart_data as $key => $data)
                     @php
-                        $slug = \Modules\Product\Entities\Product::select('id', 'slug')->find($data->id)?->slug;
+                        if ($data->options->type == \App\Enums\ProductTypeEnum::DIGITAL)
+                            {
+                                $slug = \Modules\DigitalProduct\Entities\DigitalProduct::select('id', 'slug')->find($data->id)?->slug;
+                            } else {
+                                $slug = \Modules\Product\Entities\Product::select('id', 'slug')->find($data->id)?->slug;
+                            }
                     @endphp
                     <tr class="table-cart-row" data-product-id="{{$key}}" data-varinat-id="{{$data->variant_id}}">
                         <td class="ff-jost" data-label="Product">
@@ -23,9 +28,21 @@
                                     {!! render_background_image_markup_by_attachment_id($data?->options?->image) !!}></div>
                                 <div class="carts-contents">
                                     @php
-                                        $product = \Modules\Product\Entities\Product::find($data->id)->select('id', 'slug')->first();
+                                        if ($data->options->type == \App\Enums\ProductTypeEnum::DIGITAL)
+                                        {
+                                            $product = \Modules\DigitalProduct\Entities\DigitalProduct::find($data->id)->select('id', 'slug')->first();
+                                            $product_details_route = route('tenant.digital.shop.product.details', $slug);
+                                            $product_type = 'Digital';
+                                        } else {
+                                            $product = \Modules\Product\Entities\Product::find($data->id)->select('id', 'slug')->first();
+                                            $product_details_route = route('tenant.shop.product.details', $slug);
+                                            $product_type = 'Normal';
+                                        }
                                     @endphp
-                                    <a href="{{route('tenant.shop.product.details', $slug)}}" class="name-title"> {{$data->name}} </a>
+                                    <a href="{{$product_details_route}}"
+                                       class="name-title"> {{$data->name}} </a>
+                                    <p class="badge bg-primary text-white text-small" style="vertical-align: text-top">{{$product_type}}</p>
+
                                     <span class="name-subtitle d-block mt-2">
                                         @if($data?->options?->color_name)
                                             {{__('Color:')}} {{$data?->options?->color_name}} ,
@@ -45,27 +62,38 @@
                                 </div>
                             </div>
                         </td>
-                        <td class="price-td" data-label="Price"> {{amount_with_currency_symbol($data->price)}} </td>
+                        <td class="price-td"
+                            data-label="Price"> {{float_amount_with_currency_symbol($data->price)}} </td>
                         <td class="ff-jost" data-label="Quantity">
-                            <div class="product-quantity">
-                                @if(!$wishlist)
-                                    <span class="substract">
-                                        <i class="las la-minus"></i>
-                                    </span>
-                                @endif
-                                <input class="quantity-input" {{ $wishlist ? "disabled='true' readonly='true'" : "" }} type="number" value="{{$data->qty}}">
-                                @if(!$wishlist)
-                                    <span class="plus">
-                                        <i class="las la-plus"></i>
-                                    </span>
-                                @endif
-                            </div>
+                            @if($data->options->type == \App\Enums\ProductTypeEnum::PHYSICAL)
+                                <div class="product-quantity">
+                                    @if(!$wishlist)
+                                        <span class="substract">
+                                            <i class="las la-minus"></i>
+                                        </span>
+                                    @endif
+                                    <input class="quantity-input"
+                                           {{ $wishlist ? "disabled='true' readonly='true'" : "" }} type="number"
+                                           value="{{$data->qty}}">
+                                    @if(!$wishlist)
+                                        <span class="plus">
+                                            <i class="las la-plus"></i>
+                                        </span>
+                                    @endif
+                                </div>
+                            @else
+                                <div class="product-quantity">
+                                    <input class="quantity-input" type="hidden" value="1">
+                                </div>
+                            @endif
                         </td>
                         @php
                             $subtotal = $data->price * $data->qty;
                         @endphp
-                        <td class="price-td" data-label="Subtotal"> {{amount_with_currency_symbol($subtotal)}} </td>
-                        <td class="ff-jost {{ $wishlist ? "d-flex justify-content-around align-items-center" : "" }}" data-label="Close" data-product_hash_id="{{$data->rowId}}">
+                        <td class="price-td"
+                            data-label="Subtotal"> {{float_amount_with_currency_symbol($subtotal)}} </td>
+                        <td class="ff-jost {{ $wishlist ? "d-flex justify-content-around align-items-center" : "" }}"
+                            data-label="Close" data-product_hash_id="{{$data->rowId}}">
                             @if($wishlist)
                                 <div class="move-to-wishlist">
                                     <i class="las la-cart-arrow-down align-items-center"></i>

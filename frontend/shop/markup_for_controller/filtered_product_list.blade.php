@@ -15,7 +15,7 @@
                 <div class="global-card-thumb-badge right-side">
                     @if($discount != null)
                         <span
-                            class="global-card-thumb-badge-box bg-color-two"> {{$discount}}% {{__('off')}} </span>
+                            class="global-card-thumb-badge-box bg-color-one cmn-btn-small"> {{$discount}}% {{__('off')}} </span>
                     @endif
 
                     @if(!empty($product->badge))

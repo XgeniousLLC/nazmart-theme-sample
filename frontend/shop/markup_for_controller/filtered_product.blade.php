@@ -29,7 +29,7 @@
                     @endif
                 </div>
 
-                @include(include_theme_path('shop.partials.product-options'))
+                @include('tenant.frontend.shop.partials.product-options')
             </div>
 
             <div class="global-card-contents">
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="price-update-through mt-3">
-                    <span class="flash-prices color-two"> {{amount_with_currency_symbol($sale_price)}} </span>
+                    <span class="flash-prices color-one"> {{amount_with_currency_symbol($sale_price)}} </span>
                     <span
                         class="flash-old-prices"> {{$regular_price != null ? amount_with_currency_symbol($regular_price) : ''}} </span>
                 </div>

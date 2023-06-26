@@ -29,7 +29,7 @@
                                     $product_slug = $product_slug->slug;
                                 @endphp
 
-                                <div class="col-lg-4 col-md-6 mt-4">
+                                <div class="col-lg-3 col-md-6 mt-4">
                                     <div class="single-compare">
                                         <div class="single-compare-thumb">
                                             <a href="{{route('tenant.shop.product.details', $product_slug)}}">

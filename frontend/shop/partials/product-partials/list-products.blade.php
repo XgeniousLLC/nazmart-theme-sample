@@ -34,10 +34,10 @@
                     <div class="global-flex-card-contents">
                         {!! render_product_star_rating_markup_with_count($product) !!}
                         <h5 class="global-flex-card-contents-title fw-500 mt-3">
-                            <a href="{{route('tenant.shop.product.details', $product->slug)}}"> {{Str::words($product->name, 8)}} </a>
+                            <a href="{{route('tenant.shop.product.details', $product->slug)}}"> {{Str::words($product->name, 15)}} </a>
                         </h5>
                         <div class="price-update-through mt-4">
-                            <span class="flash-prices color-two"> {{amount_with_currency_symbol($sale_price)}} </span>
+                            <span class="flash-prices color-one"> {{amount_with_currency_symbol($sale_price)}} </span>
                             <span class="flash-old-prices"> {{$regular_price != null ? amount_with_currency_symbol($regular_price) : ''}} </span>
                         </div>
                         <p class="global-flex-card-contents-para extra-padding-right mt-4"> {{Str::words($product->summary, 30)}} </p>
@@ -46,7 +46,7 @@
                                 @if($product->inventory_detail_count < 1)
                                     <div class="btn-wrapper" data-bs-toggle="tooltip" data-bs-placement="top"
                                          title="{{__('Add to Cart')}}">
-                                        <a href="javascript:void(0)" data-product_id="{{ $product->id }}" class="add-to-cart-btn cmn-btn cmn-btn-bg-2 radius-0"> {{__('Add to Cart')}} </a>
+                                        <a href="javascript:void(0)" data-product_id="{{ $product->id }}" class="add-to-cart-btn cmn-btn cmn-btn-bg-1 cmn-btn-small radius-0"> {{__('Add to Cart')}} </a>
                                     </div>
                                     <div class="icon-list wishlist-btn" data-bs-toggle="tooltip" data-bs-placement="top"
                                          title="{{__('Add to Wishlist')}}">

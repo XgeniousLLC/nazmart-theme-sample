@@ -33,7 +33,7 @@
                                 <div class="global-card no-shadow radius-0 pb-0">
                                     <div class="global-card-thumb">
                                         <a href="{{route('tenant.shop.product.details', $product->slug)}}">
-                                            {!! render_image_markup_by_attachment_id($product->image_id) !!}
+                                            {!! render_image_markup_by_attachment_id($product->image_id, '', 'grid') !!}
                                         </a>
                                         <div class="global-card-thumb-badge right-side">
                                             @if($discount != null)
@@ -45,32 +45,26 @@
                                                 <span
                                                     class="global-card-thumb-badge-box bg-color-new"> {{$product?->badge?->name}} </span>
                                             @endif
-
-                                            @if(!is_null($campaign_name))
-                                                <span
-                                                    class="global-card-thumb-badge-box bg-color-new"> {{$campaign_name}} </span>
-                                            @endif
                                         </div>
 
-                                        @include(include_theme_path('shop.partials.product-options'))
+                                        @include('tenant.frontend.shop.partials.product-options')
                                     </div>
 
                                     <div class="global-card-contents">
                                         <div class="global-card-contents-flex">
-                                            <h5 class="global-card-contents-title"><a
-                                                    href="javascript:void(0)"> {{Str::words($product->name, 4)}} </a>
+                                            <h5 class="global-card-contents-title">
+                                                <a href="javascript:void(0)"> {{Str::words($product->name, 15)}} </a>
                                             </h5>
                                             {!! render_product_star_rating_markup_with_count($product) !!}
                                         </div>
                                         <div class="price-update-through mt-3">
-                                            <span class="flash-prices color-two"> {{amount_with_currency_symbol($sale_price)}} </span>
+                                            <span class="flash-prices color-two"> {{float_amount_with_currency_symbol($sale_price)}} </span>
                                             <span
-                                                class="flash-old-prices"> {{$regular_price != null ? amount_with_currency_symbol($regular_price) : ''}} </span>
+                                                class="flash-old-prices"> {{$regular_price != null ? float_amount_with_currency_symbol($regular_price) : ''}} </span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         @endforeach
                         <div class="pagination mt-60">
                             <ul class="pagination-list">

@@ -120,7 +120,7 @@
 @section('scripts')
     <script>
         $(function () {
-            $(document).on('click', 'ul.pagination .page-item a', function (e) {
+            $(document).on('click', 'ul.pagination-list li a', function (e) {
                 e.preventDefault();
 
                 filter_product_request($(this).data('page'));

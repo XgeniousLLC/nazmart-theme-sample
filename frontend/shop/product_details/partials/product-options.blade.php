@@ -160,27 +160,27 @@
         </div>
     </div>
 
-        <div class="wishlist-share social_share_parent">
-            @php
-                $product_primary_image = get_attachment_image_by_id($product->image_id);
-                $product_primary_image = $product_primary_image ? $product_primary_image['img_url'] : '';
-            @endphp
+    <div class="wishlist-share social_share_parent">
+        @php
+            $product_primary_image = get_attachment_image_by_id($product->image_id);
+            $product_primary_image = $product_primary_image ? $product_primary_image['img_url'] : '';
+        @endphp
 
-            <ul class="d-flex mt-5">
-                {!! single_post_share($product->slug, $product->name, $product_primary_image) !!}
-            </ul>
-        </div>
+        <ul class="d-flex mt-5">
+            {!! single_post_share($product->slug, $product->name, $product_primary_image) !!}
+        </ul>
+    </div>
 
     <div class="shop-details-stock shop-border-top pt-4 mt-4">
         <ul class="stock-category">
             <li class="category-list">
                 <span class="list-item fw-600">
-                    <a href="{{route('tenant.shop.category.products', ['category' ,$product?->category?->slug])}}">{{$product?->category?->name}}</a>
+                    <a href="{{route('tenant.shop.category.products', [$product?->category?->slug, 'category'])}}">{{$product?->category?->name}}</a>
                     |
-                    <a href="{{route('tenant.shop.category.products', ['subcategory' ,$product?->subCategory?->slug])}}">{{$product?->subCategory?->name}}</a>
+                    <a href="{{route('tenant.shop.category.products', [$product?->subCategory?->slug, 'subcategory'])}}">{{$product?->subCategory?->name}}</a>
                     |
                     @foreach($product->childCategory ?? [] as $child_category)
-                        <a href="{{route('tenant.shop.category.products', ['child-category' ,$child_category?->slug])}}"> {{$child_category->name}} </a>
+                        <a href="{{route('tenant.shop.category.products', [$child_category?->slug, 'child-category'])}}"> {{$child_category->name}} </a>
 
                         @if(!$loop->last)
                             ,
@@ -205,7 +205,7 @@
         <div class="delivery-options delivery-parent mt-4">
             @if($product->product_delivery_option != null)
                 @foreach($product->product_delivery_option as $option)
-                    <div class="delivery-item d-flex">
+                    <div class="delivery-item">
                         <div class="icon">
                             <i class="{{ $option->icon }}"></i>
                         </div>

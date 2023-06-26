@@ -1,27 +1,49 @@
 {
-    "name":"Medicom",
-    "slug":"medicom",
-    "description":"Pharmaceutical Theme",
-    "author":"Xgenious",
-    "version":"1.0.0",
-    "status":true,
-    "screenshot":[
+    "name": "Casual",
+    "slug": "casual",
+    "description": "Casual Fashion Theme",
+    "author": "Mazharul Islam Suzon",
+    "version": "1.0.3",
+    "status": true,
+    "screenshot": [
         {
-            "primary":"primary.jpg"
+            "primary": "primary.jpg"
         }
     ],
-    "headerHook":[
+    "headerHook": [
         {
-            "style":["medicom", "custom_frontend"],
-            "script":[],
-            "blade":["header-hook"]
+            "loadCoreStyle": {
+                "odometer": false,
+                "common": false,
+                "magnific-popup": false
+            },
+            "style": [
+                "style"
+            ],
+            "rtl_style": [
+                "rtl"
+            ],
+            "script": [],
+            "blade": [],
+            "navbarArea": "navbar",
+            "breadcrumbArea": "breadcrumb"
         }
     ],
-    "footerHook":[
+    "footerHook": [
         {
-            "style":[],
-            "script":["theme_custom"],
-            "blade":["footer-hook"]
+            "loadCoreScript": {
+                "odometer": false,
+                "viewport.jquery": false,
+                "main": false
+            },
+            "style": [],
+            "script": [
+                "imagesloaded.pkgd.min",
+                "isotope.pkgd.min",
+                "main"
+            ],
+            "blade": [],
+            "widgetArea": "footer"
         }
     ]
 }

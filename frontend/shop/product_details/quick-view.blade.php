@@ -32,12 +32,18 @@
             <div class="col-lg-4 col-xl-5">
                 <div class="global-slick-init shop-details-top-slider quick-view-long-img" id="shop_details_gallery_slider" data-asNavFor=".shop-details-click-img" data-fade="true"
                      data-infinite="true" data-autoplaySpeed="3000" data-autoplay="true" data-src="{{ $image_details["img_url"] }}">
-                        <div class="quick-view-thumb position-relative">
-                            <img src="{{ $image_details["img_url"] }}">
-                            <div class="global-card-thumb-badge right-side">
-                                <span class="global-card-thumb-badge-box bg-color-two"> 10% Off </span>
-                            </div>
+                    <div class="quick-view-thumb position-relative">
+                        <img src="{{ $image_details["img_url"] }}">
+                        <div class="global-card-thumb-badge right-side">
+                            @if(!empty($discount))
+                                <span class="global-card-thumb-badge-box bg-color-two"> {{$discount}}% {{__('off')}} </span>
+                            @endif
+
+                            @if(!empty($product->badge))
+                                <span class="global-card-thumb-badge-box bg-color-new"> {{$product?->badge?->name}} </span>
+                            @endif
                         </div>
+                    </div>
                 </div>
             </div>
 

@@ -22,7 +22,7 @@
                     </li>
                 </ul>
                 <div class="btn-wrapper mt-3">
-                    <a href="{{route('tenant.shop.checkout')}}" class="cmn-btn cmn-btn-bg-2 w-100 radius-0"> {{__('Proceed to Checkout')}} </a>
+                    <a href="{{route('tenant.shop.checkout')}}" class="cmn-btn cmn-btn-bg-1 w-100 radius-0"> {{__('Proceed to Checkout')}} </a>
                 </div>
             </div>
         </div>

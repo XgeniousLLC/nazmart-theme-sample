@@ -148,9 +148,9 @@
         <!-- Shop Details area end -->
     <section class="shop-details-area padding-top-100 padding-bottom-50">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-between">
                 @include(include_theme_path('shop.product_details.partials.product-images-slider'))
-                <div class="col-lg-6">
+                <div class="col-xl-5 col-lg-6">
                     @include(include_theme_path('shop.product_details.partials.product-options'))
                 </div>
             </div>

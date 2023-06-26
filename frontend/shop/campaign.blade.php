@@ -119,8 +119,9 @@
                 <div class="shop-grid-contents">
                     <div class="grid-product-list">
                         <div id="tab-grid2" class="tab-content-item active">
-                            <div class="row mt-4 gy-5">
-                                @foreach($products as $product)
+                            <!-- New markup -->
+                            <div class="row margin-top-10">
+                                @foreach($products ?? [] as $product)
                                     @php
                                         $product = $product->product;
                                         if ($product == null)
@@ -133,59 +134,68 @@
                                         $regular_price = $data['regular_price'];
                                         $sale_price = $data['sale_price'];
                                         $discount = $data['discount'];
+                                        $delay = '.1s';
+                                        $class = 'fadeInUp';
+
+                                        if ($loop->even)
+                                        {
+                                            $delay = '.2s';
+                                            $class = 'fadeInDown';
+                                        }
+
                                     @endphp
-
-                                    <div class="col-xxl-4 col-lg-6 col-sm-6">
-                                        <div class="global-card no-shadow radius-0 pb-0">
-                                            <div class="global-card-thumb">
-                                                <a href="{{route('tenant.shop.product.details', $product->slug)}}">
-                                                    {!! render_image_markup_by_attachment_id($product->image_id, '', 'grid') !!}
+                                    <div class="col-xl-3 col-md-6 margin-top-30 wow {{$class}}" data-wow-delay="{{$delay}}">
+                                        <div class="signle-collection bg-item-four radius-20">
+                                            <div class="collction-thumb">
+                                                <a href="{{to_product_details($product->slug)}}">
+                                                    {!! render_image_markup_by_attachment_id($product->image_id, 'lazyloads') !!}
                                                 </a>
-                                                <div class="global-card-thumb-badge right-side">
-                                                    @if($discount != null)
-                                                        <span
-                                                                class="global-card-thumb-badge-box bg-color-two"> {{$discount}}% {{__('off')}} </span>
-                                                    @endif
-
-                                                    @if(!empty($product->badge))
-                                                        <span
-                                                                class="global-card-thumb-badge-box bg-color-new"> {{$product?->badge?->name}} </span>
-                                                    @endif
-                                                </div>
 
                                                 @include(include_theme_path('shop.partials.product-options'))
-                                            </div>
 
-                                            <div class="flash-countdown-camp flash-countdown-style-1 flash-countdown index-02" data-date="{{ $campaign->end_date }}">
-                                                <div class="single-box">
-                                                    <span class="counter-days item"></span>
-                                                    <span class="label item">{{ __('Day') }}</span>
-                                                </div>
-                                                <div class="single-box">
-                                                    <span class="counter-hours item"></span>
-                                                    <span class="label item">{{ __('Hour') }}</span>
-                                                </div>
-                                                <div class="single-box">
-                                                    <span class="counter-minutes item"></span>
-                                                    <span class="label item">{{ __('Minute') }}</span>
-                                                </div>
-                                                <div class="single-box">
-                                                    <span class="counter-seconds item"></span>
-                                                    <span class="label item">{{ __('Second') }}</span>
+                                                @if(!empty($discount))
+                                                    <span class="sale bg-color-one sale-radius-1"> {{__('Sale')}} </span>
+                                                @endif
+                                                <div class="flash-countdown-camp countdown-2 flash-countdown" data-date="{{ $campaign->end_date }}">
+                                                    <div class="single-box">
+                                                        <span class="counter-days item"></span>
+                                                        <span class="label item">{{ __('Day') }}</span>
+                                                    </div>
+                                                    <div class="single-box">
+                                                        <span class="counter-hours item"></span>
+                                                        <span class="label item">{{ __('Hour') }}</span>
+                                                    </div>
+                                                    <div class="single-box">
+                                                        <span class="counter-minutes item"></span>
+                                                        <span class="label item">{{ __('Minute') }}</span>
+                                                    </div>
+                                                    <div class="single-box">
+                                                        <span class="counter-seconds item"></span>
+                                                        <span class="label item">{{ __('Second') }}</span>
+                                                    </div>
                                                 </div>
                                             </div>
-
-                                            <div class="global-card-contents">
-                                                <div class="global-card-contents-flex">
-                                                    <h5 class="global-card-contents-title">
-                                                        <a href="javascript:void(0)"> {{Str::words($product->name, 4)}} </a>
-                                                    </h5>
-                                                    {!! render_product_star_rating_markup_with_count($product) !!}
-                                                </div>
-                                                <div class="price-update-through mt-3">
-                                                    <span class="flash-prices color-two"> {{amount_with_currency_symbol($sale_price)}} </span>
-                                                    <span
-                                                            class="flash-old-prices"> {{$regular_price != null ? amount_with_currency_symbol($regular_price) : ''}} </span>
+                                            <div class="collection-contents">
+                                                <h2 class="collection-title ff-jost">
+                                                    <a href="{{to_product_details($product->slug)}}"> {{product_limited_text($product->name, 'title')}} </a>
+                                                </h2>
+                                                <div class="collection-flex">
+                                                    <div class="price-update-through margin-top-15">
+                                                        <span class="fs-22 ff-roboto fw-500 flash-prices color-one"> {{amount_with_currency_symbol($sale_price)}} </span>
+                                                        <span class="fs-18 flash-old-prices"> {{amount_with_currency_symbol($regular_price)}} </span>
+                                                    </div>
+                                                    <div class="collection-flex-icon">
+                                                        @if($product->inventory_detail_count < 1)
+                                                            <a href="javascript:void(0)" class="shopping-icon cart-loading add-to-cart-btn" data-product_id="{{ $product->id }}">
+                                                                <i class="las la-shopping-bag"></i>
+                                                            </a>
+                                                        @else
+                                                            <a href="javascript:void(0)" class="shopping-icon cart-loading product-quick-view-ajax"
+                                                               data-action-route="{{ route('tenant.products.single-quick-view', $product->slug) }}">
+                                                                <i class="las la-shopping-bag"></i>
+                                                            </a>
+                                                        @endif
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
